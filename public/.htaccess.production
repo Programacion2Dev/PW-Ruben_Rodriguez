@@ -1,0 +1,116 @@
+# =====================================================
+# CONFIGURACIÓN BASE
+# =====================================================
+RewriteOptions inherit
+
+<IfModule mod_negotiation.c>
+    Options -MultiViews -Indexes
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# =====================================================
+# 1. FORZAR HTTPS + WWW (PRIMERA PRIORIDAD)
+# =====================================================
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^www\.dr-ruben-rodriguez-ginecologo-tijuana\.com$ [NC]
+RewriteRule ^(.*)$ https://www.dr-ruben-rodriguez-ginecologo-tijuana.com/$1 [R=301,L]
+
+# =====================================================
+# 2. QUITAR index.php DE LA URL
+#    /index.php/xxx → /xxx
+# =====================================================
+RewriteCond %{THE_REQUEST} \s/index\.php/([^\s]+) [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# =====================================================
+# 3. QUITAR SLASH FINAL (SEO)
+# =====================================================
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} .+/$
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# =====================================================
+# 4. HEADERS NECESARIOS PARA LARAVEL
+# =====================================================
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+RewriteCond %{HTTP:x-xsrf-token} .
+RewriteRule .* - [E=HTTP_X_XSRF_TOKEN:%{HTTP:X-XSRF-Token}]
+
+# =====================================================
+# 5. FRONT CONTROLLER (LARAVEL)
+# =====================================================
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+
+</IfModule>
+
+# =====================================================
+# 6. SEGURIDAD BÁSICA
+# =====================================================
+
+# Proteger archivos sensibles
+<FilesMatch "^(\.env|composer\.json|composer\.lock|package\.json|vite\.config\.js)">
+    Require all denied
+</FilesMatch>
+
+# Proteger .htaccess
+<Files .htaccess>
+    Require all denied
+</Files>
+
+# Prevenir XSS básico y SQL Injection comunes
+<IfModule mod_rewrite.c>
+RewriteCond %{QUERY_STRING} (<|%3C).*script.*(>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+RewriteRule .* - [F,L]
+</IfModule>
+
+# =====================================================
+# 7. HEADERS DE SEGURIDAD (RECOMENDADO)
+# =====================================================
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+# =====================================================
+# 8. COMPRESIÓN (GZIP)
+# =====================================================
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain text/html text/css text/javascript application/javascript application/json application/xml image/svg+xml
+    Header append Vary Accept-Encoding
+</IfModule>
+
+# =====================================================
+# 9. CACHE (OPTIMIZADO PARA VITE)
+# =====================================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Assets versionados (Vite)
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+
+    # HTML (controlado)
+    ExpiresByType text/html "access plus 1 month"
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js|woff2?|png|jpg|jpeg|webp|svg)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
