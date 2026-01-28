@@ -1,7 +1,7 @@
 <!-- SECCIÓN CONTACTO -->
 <section id="section_contact">
     <div class="container">
-        <h2 class="text-center subtitle-page">CONTACTA AL IMPLANTÓLOGO</h2>
+        <h2 class="text-center subtitle-page">CONTACTA AL GINECÓLOGO</h2>
         <div class="row" style="margin-top:30px;">
             <!-- INFORMACIÓN DE CONTACTO -->
             <div class="col-12 col-md-7 col-lg-5 mb-3">

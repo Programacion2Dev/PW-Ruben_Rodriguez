@@ -8,7 +8,7 @@
                     <p class="title-page2 mb-3">Ginecología y Obstetricia</p>
                     <div class="text-gral">
                         <p>
-                            Soy médico especialista en Ginecología y Obstetricia, con más de 10 años de experiencia en el cuidado integral de la salud de la mujer. Brindo atención profesional y personalizada, con un enfoque en la prevención, el diagnóstico y el tratamiento ginecológico en cada etapa de la vida.
+                            Soy médico especialista con más de 10 años de experiencia en el cuidado integral de la salud femenina.
                         </p>
                     </div>
                 </div>
@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-12 col-md-10 offset-md-1 text-gral">
                     <p>
-                        Atiendo la salud femenina desde el control del embarazo y la salud reproductiva, hasta el manejo de padecimientos ginecológicos, procedimientos mínimamente invasivos y opciones avanzadas orientadas al bienestar de la mujer.
+                        Brindo atención profesional y personalizada, con opciones avanzadas orientadas para el bienestar de la mujer en cada etapa de su vida.
                     </p>
                 </div>
             </div>

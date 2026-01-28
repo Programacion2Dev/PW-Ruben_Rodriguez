@@ -127,7 +127,9 @@ function ServiceCarousel(containerId) {
         stopAutoplay();
         clearTimeout(resumeTimeout);
         resumeTimeout = setTimeout(function () {
-            startAutoplay();
+            if(containerId != "reviewsCarousel") { // Pausar slider de los reviews
+                startAutoplay();
+            }
         }, 3000);
     }
 
@@ -165,15 +167,16 @@ function ServiceCarousel(containerId) {
 
 // Crear instancias para cada carrusel
 var reviewsCarousel = new ServiceCarousel('reviewsCarousel');
+var reviewsCarouselXs = new ServiceCarousel('reviewsCarouselXs');
 var servicesCarousel = new ServiceCarousel('servicesCarousel');
 var servicesCarouselXs = new ServiceCarousel('servicesCarouselXs');
 // Agrega más según necesites
 
 // Iniciar autoplay de todos los sliders al cargar
 document.addEventListener('DOMContentLoaded', function () {
-    if (reviewsCarousel && reviewsCarousel.startAutoplay) {
+    /* if (reviewsCarousel && reviewsCarousel.startAutoplay) { // Pausar slider de los reviews
         reviewsCarousel.startAutoplay();
-    }
+    } */
     if (servicesCarousel && servicesCarousel.startAutoplay) {
         servicesCarousel.startAutoplay();
     }
@@ -347,6 +350,19 @@ window.goToReviewSlide = function(index) {
     });
 };
 
+window.goToReviewSlide = function(index) {
+    reviewsCarouselXs.goTo(index);
+    reviewsCarouselXs.pauseAndResume();
+    // Actualizar dots manualmente
+    document.querySelectorAll('#reviewDots .dot').forEach((dot, i) => {
+        if (i === index) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+};
+
 window.goToCredentialSlide = function(n) {
     activeCredentialSlide = n;
     showCredentialSlide();
@@ -387,6 +403,15 @@ window.nextReviewSlide = function() {
 window.prevReviewSlide = function() {
     reviewsCarousel.prev();
     reviewsCarousel.pauseAndResume();
+};
+
+window.nextReviewSlide = function() {
+    reviewsCarouselXs.next();
+    reviewsCarouselXs.pauseAndResume();
+};
+window.prevReviewSlide = function() {
+    reviewsCarouselXs.prev();
+    reviewsCarouselXs.pauseAndResume();
 };
 
 window.nextCredentialSlide = function() {

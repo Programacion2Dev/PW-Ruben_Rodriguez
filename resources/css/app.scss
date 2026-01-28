@@ -92,8 +92,8 @@ $theme-colors: (
 
 // Utilidades personalizadas
 :root {
-    /* --primary-blue: #3385B9; */
-    --primary-blue: #6A89A7;
+    /* --primary-blue: "[Dr.'s data]"; */
+    --primary-blue: #3385B9;
     --light-gray: #F5F5F5;
     --white: #FFFFFF;
     --dark-text: #333333;
@@ -191,9 +191,8 @@ body { padding-top: 72px; }
     opacity: 0.8;
 }
 .navbar-social-icons {
-    display: inline-flex !important;
+    /* display: inline-flex !important; */
     gap: 15px;
-    align-items: center;
     padding-left: 0;
     margin-top: -9px;
     vertical-align: middle;
@@ -255,8 +254,8 @@ h3 {
     color: var(--primary-blue);
 }
 .subtitulo {
-  font-family: 'latob', 'sans-serif';
-  font-size: 20px;
+    font-family: 'latob', 'sans-serif';
+    font-size: 20px;
   /* color: #02347B; */
 }
 
@@ -267,8 +266,8 @@ h3 {
     color: #000;
 }
 .text-gral-bold {
-  font-family: 'latob', 'sans-serif';
-  font-size: 20px;
+    font-family: 'latob', 'sans-serif';
+    font-size: 20px;
 }
 
 .margin-between {
@@ -641,7 +640,7 @@ h3 {
         display: block;
     }
     .navbar-doctor-page .navbar-nav .nav-item.navbar-social-icons {
-        display: inline-flex !important;
+        /* display: inline-flex !important; */
         margin: -9px 0 0 0;
     }
 
