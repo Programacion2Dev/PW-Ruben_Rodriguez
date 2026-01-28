@@ -1,2 +1,4 @@
-# -PW-Ruben_Rodriguez
-Sitio web del Dr. Ruben Rodriguez
+### Desarrollador ###
+* Ray Felix
+
+### Colaboración ###

@@ -1,0 +1,28 @@
+{
+	"name": "Dr. Ruben Rodriguez",
+	"short_name": "Dr. Ruben Rodriguez",
+	"start_url": "/",
+	"background_color": "#FFFFFF",
+	"theme_color": "#6A89A7",
+	"display": "standalone",
+	"orientation": "portrait",
+	"description": "El ginecólogo en Tijuana, el Dr. Ruben Rodriguez brinda atención profesional en el diagnóstico y tratamientos ginecológicos. ¡Agenda tu cita hoy mismo!",
+	"lang": "es",
+	"icons": [
+		{
+			"src": "/imgs/icons/icono-doctor-especialista-1x.png",
+			"type": "image/png",
+			"sizes": "48x48"
+		},
+		{
+			"src": "/imgs/icons/icono-doctor-especialista-2x.png",
+			"type": "image/png",
+			"sizes": "96x96"
+		},
+		{
+			"src": "/imgs/icons/icono-doctor-especialista-3x.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		}
+	]
+}
