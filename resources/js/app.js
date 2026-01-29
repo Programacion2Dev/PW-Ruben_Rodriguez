@@ -350,11 +350,11 @@ window.goToReviewSlide = function(index) {
     });
 };
 
-window.goToReviewSlide = function(index) {
+window.goToReviewXsSlide = function(index) {
     reviewsCarouselXs.goTo(index);
     reviewsCarouselXs.pauseAndResume();
     // Actualizar dots manualmente
-    document.querySelectorAll('#reviewDots .dot').forEach((dot, i) => {
+    document.querySelectorAll('#reviewDotsXs .dot').forEach((dot, i) => {
         if (i === index) {
             dot.classList.add('active');
         } else {
