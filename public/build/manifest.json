@@ -1,0 +1,81 @@
+{
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2": {
+    "file": "assets/fa-brands-400-BfBXV7Mm.woff2",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2"
+  },
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2": {
+    "file": "assets/fa-regular-400-BVHPE7da.woff2",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2"
+  },
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2": {
+    "file": "assets/fa-solid-900-8GirhLYJ.woff2",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2"
+  },
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.woff2": {
+    "file": "assets/fa-v4compatibility-DnhYSyY-.woff2",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.woff2"
+  },
+  "resources/css/app.scss": {
+    "file": "assets/app-D4BIy4bB.css",
+    "src": "resources/css/app.scss",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/fonts/Lato-Bold/Lato-Bold.eot": {
+    "file": "assets/Lato-Bold-Bc_5wn_z.eot",
+    "src": "resources/fonts/Lato-Bold/Lato-Bold.eot"
+  },
+  "resources/fonts/Lato-Bold/Lato-Bold.otf": {
+    "file": "assets/Lato-Bold-CY9LByjn.otf",
+    "src": "resources/fonts/Lato-Bold/Lato-Bold.otf"
+  },
+  "resources/fonts/Lato-Bold/Lato-Bold.svg": {
+    "file": "assets/Lato-Bold-4vn2i34H.svg",
+    "src": "resources/fonts/Lato-Bold/Lato-Bold.svg"
+  },
+  "resources/fonts/Lato-Bold/Lato-Bold.ttf": {
+    "file": "assets/Lato-Bold-BrMzgm6X.ttf",
+    "src": "resources/fonts/Lato-Bold/Lato-Bold.ttf"
+  },
+  "resources/fonts/Lato-Bold/Lato-Bold.woff": {
+    "file": "assets/Lato-Bold-lciavXY7.woff",
+    "src": "resources/fonts/Lato-Bold/Lato-Bold.woff"
+  },
+  "resources/fonts/Lato-Bold/Lato-Bold.woff2": {
+    "file": "assets/Lato-Bold-C_9kFqA4.woff2",
+    "src": "resources/fonts/Lato-Bold/Lato-Bold.woff2"
+  },
+  "resources/fonts/Lato-Light/Lato-Light.eot": {
+    "file": "assets/Lato-Light-v6Xe6KtR.eot",
+    "src": "resources/fonts/Lato-Light/Lato-Light.eot"
+  },
+  "resources/fonts/Lato-Light/Lato-Light.otf": {
+    "file": "assets/Lato-Light-DunKNt4P.otf",
+    "src": "resources/fonts/Lato-Light/Lato-Light.otf"
+  },
+  "resources/fonts/Lato-Light/Lato-Light.svg": {
+    "file": "assets/Lato-Light-RPYfE1-C.svg",
+    "src": "resources/fonts/Lato-Light/Lato-Light.svg"
+  },
+  "resources/fonts/Lato-Light/Lato-Light.ttf": {
+    "file": "assets/Lato-Light-ByusnHZr.ttf",
+    "src": "resources/fonts/Lato-Light/Lato-Light.ttf"
+  },
+  "resources/fonts/Lato-Light/Lato-Light.woff": {
+    "file": "assets/Lato-Light-ClFoSVeN.woff",
+    "src": "resources/fonts/Lato-Light/Lato-Light.woff"
+  },
+  "resources/fonts/Lato-Light/Lato-Light.woff2": {
+    "file": "assets/Lato-Light-j3cSv7RG.woff2",
+    "src": "resources/fonts/Lato-Light/Lato-Light.woff2"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-PvAIJ6cC.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
