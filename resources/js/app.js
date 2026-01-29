@@ -127,9 +127,8 @@ function ServiceCarousel(containerId) {
         stopAutoplay();
         clearTimeout(resumeTimeout);
         resumeTimeout = setTimeout(function () {
-            if(containerId != "reviewsCarousel") { // Pausar slider de los reviews
-                startAutoplay();
-            }
+            const excludedContainers = ["reviewsCarousel", "reviewsCarouselXs"]; // Pausa slider de los reviews
+            if (!excludedContainers.includes(containerId)) { startAutoplay(); }
         }, 3000);
     }
 
@@ -350,7 +349,7 @@ window.goToReviewSlide = function(index) {
     });
 };
 
-window.goToReviewXsSlide = function(index) {
+window.goToReviewSlideXs = function(index) {
     reviewsCarouselXs.goTo(index);
     reviewsCarouselXs.pauseAndResume();
     // Actualizar dots manualmente
@@ -405,11 +404,11 @@ window.prevReviewSlide = function() {
     reviewsCarousel.pauseAndResume();
 };
 
-window.nextReviewSlide = function() {
+window.nextReviewSlideXs = function() {
     reviewsCarouselXs.next();
     reviewsCarouselXs.pauseAndResume();
 };
-window.prevReviewSlide = function() {
+window.prevReviewSlideXs = function() {
     reviewsCarouselXs.prev();
     reviewsCarouselXs.pauseAndResume();
 };

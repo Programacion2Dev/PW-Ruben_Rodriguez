@@ -12,7 +12,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-4 margin-between text-center">
+                <div class="col-12 col-sm-6 col-md-4 form-group-custom text-center">
                     <x-picture
                         src="/imgs/dr/img-doctor-ruben-rodriguez-ginecologo-tijuana"
                         class="img-fluid float-md-end center-on-mobile"

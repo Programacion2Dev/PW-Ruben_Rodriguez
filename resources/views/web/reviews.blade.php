@@ -252,10 +252,16 @@
                 </div>
             </div>
             <div id="reviewDotsXs" class="carousel-dots" data-carousel="reviewsCarouselXs">
-                <span class="dot active" onclick="goToReviewXsSlide(0)"></span>
-                <span class="dot" onclick="goToReviewXsSlide(1)"></span>
-                <span class="dot" onclick="goToReviewXsSlide(2)"></span>
-                <span class="dot" onclick="goToReviewXsSlide(3)"></span>
+                <span class="dot active" onclick="goToReviewSlideXs(0)"></span>
+                <span class="dot" onclick="goToReviewSlideXs(1)"></span>
+                <span class="dot" onclick="goToReviewSlideXs(2)"></span>
+                <span class="dot" onclick="goToReviewSlideXs(3)"></span>
+                <span class="dot" onclick="goToReviewSlideXs(4)"></span>
+                <span class="dot" onclick="goToReviewSlideXs(5)"></span>
+                <span class="dot" onclick="goToReviewSlideXs(6)"></span>
+                <span class="dot" onclick="goToReviewSlideXs(7)"></span>
+                <span class="dot" onclick="goToReviewSlideXs(8)"></span>
+                <span class="dot" onclick="goToReviewSlideXs(9)"></span>
             </div>
         </div>
     </div>

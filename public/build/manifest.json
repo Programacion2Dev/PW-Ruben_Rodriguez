@@ -16,7 +16,7 @@
     "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.woff2"
   },
   "resources/css/app.scss": {
-    "file": "assets/app-C7HsGryC.css",
+    "file": "assets/app-DEGbfmRG.css",
     "src": "resources/css/app.scss",
     "isEntry": true,
     "name": "app",
@@ -73,7 +73,7 @@
     "src": "resources/fonts/Lato-Light/Lato-Light.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-C_1mKElM.js",
+    "file": "assets/app-PvAIJ6cC.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
